@@ -20,11 +20,11 @@ SECRET_KEY = 'django-insecure-mfjp9^!rumqf)+5!m5-q+01=9u#a85$^+ma)v8)4$edsuif6(u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "avataraichatbot-production.up.railway.app",        
+    "avataraichatbotbackend-production.up.railway.app",        
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "avataraichatbotbackend-production.up.railway.app",
+    "https://avataraichatbotbackend-production.up.railway.app",
     "https://avataraichatbotfrontend-production.up.railway.app",
 ]
 
