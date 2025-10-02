@@ -4,6 +4,6 @@ from myapp.views import chat, health   # <-- import
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("chat", chat),     # <-- EXACT: /chat (no trailing slash)
+    path("chat/", chat),     # <-- EXACT: /chat (no trailing slash)
     path("health", health),
 ]
