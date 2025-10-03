@@ -20,25 +20,30 @@ SECRET_KEY = 'django-insecure-mfjp9^!rumqf)+5!m5-q+01=9u#a85$^+ma)v8)4$edsuif6(u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "avataraichatbotbackend-production.up.railway.app",        
+    'avataraichatbotbackend-production.up.railway.app',
+    '127.0.0.1',
+    'localhost',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://avataraichatbotbackend-production.up.railway.app",
-    "https://avataraichatbotfrontend-production.up.railway.app",
+    'https://avataraichatbotbackend-production.up.railway.app',
+    'https://avataraichatbotfrontend-production.up.railway.app',
+    'http://127.0.0.1:5173',   # Vite dev server
+    'http://localhost:5173',   # Vite dev server
 ]
+
 
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # CORS
-CORS_ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "").split(",") if o.strip()]
+CORS_ALLOWED_ORIGINS = [o.strip() for o in os.getenv('ALLOWED_ORIGINS', '').split(',') if o.strip()]
 CORS_ALLOW_CREDENTIALS = True
 
 # Static (unchanged)
-STATIC_URL = "static/"
+STATIC_URL = 'static/'
 
 
 # Application definition
@@ -51,7 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    "corsheaders",    
+    'corsheaders',    
     'myapp',      
    
 ]
