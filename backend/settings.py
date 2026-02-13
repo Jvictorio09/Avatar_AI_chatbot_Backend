@@ -22,6 +22,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'avataraichatbotbackend-production.up.railway.app',
     '127.0.0.1',
+    '127.0.0.2',
     'localhost',
 ]
 
